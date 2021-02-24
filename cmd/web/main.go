@@ -2,12 +2,12 @@ package main
 
 import (
 	"fmt"
-	"helloworld/pkg/handlers"
 	"log"
 	"net/http"
 
-	"github.com/ono5/hello-world/pkg/config"
-	"github.com/ono5/helloworld/render"
+	"helloworld/pkg/config"
+	"helloworld/pkg/handlers"
+	"helloworld/pkg/render"
 )
 
 const portNumber = ":8080"
@@ -21,8 +21,15 @@ func main() {
 	}
 
 	app.TemplateCache = tc
-	http.HandleFunc("/", handlers.Home)
-	http.HandleFunc("/about", handlers.About)
+	app.UseCache = false
+
+	repo := handlers.NewRepo(&app)
+	handlers.NewHandlers((repo))
+
+	render.NewTemplates(&app)
+
+	http.HandleFunc("/", handlers.Repo.Home)
+	http.HandleFunc("/about", handlers.Repo.About)
 
 	fmt.Println(fmt.Printf("Starting appllication on port %s\n", portNumber))
 	_ = http.ListenAndServe(portNumber, nil)
