@@ -1,10 +1,10 @@
 package handlers
 
 import (
-	"helloworld/pkg/render"
 	"net/http"
 
 	"helloworld/pkg/config"
+	"helloworld/pkg/render"
 )
 
 // Repo the repository used by the handlers
