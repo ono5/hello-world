@@ -1,3 +1,4 @@
 github.com/bmizerany/pat v0.0.0-20170815010413-6226ea591a40 h1:y4B3+GPxKlrigF1ha5FFErxK+sr6sWxQovRMzwMhejo=
 github.com/bmizerany/pat v0.0.0-20170815010413-6226ea591a40/go.mod h1:8rLXio+WjiTceGBHIoTvn60HIbs7Hm7bcHjyrSqYB9c=
-github.com/ono5/hello-world v0.0.0-20210224224713-3118d25b74ff h1:2V1uKpeqoR8lBZI8oISgx9FYamKIIGT+LhDBJ98XyZs=
+github.com/go-chi/chi v1.5.3 h1:+DVDS9/D3MTbEu3WrrH3oz9oP6PlSPSNj8LLw3X17yU=
+github.com/go-chi/chi v1.5.3/go.mod h1:Q8xfe6s3fjZyMr8ZTv5jL+vxhVaFyCq2s+RvSfzTD0E=
